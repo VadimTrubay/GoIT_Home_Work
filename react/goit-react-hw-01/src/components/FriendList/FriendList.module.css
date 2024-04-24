@@ -1,0 +1,14 @@
+.friend_list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.friend_list li {
+  list-style: none;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  padding: 10px;
+  font-weight: 600;
+}

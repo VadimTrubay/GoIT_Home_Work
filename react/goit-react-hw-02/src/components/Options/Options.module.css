@@ -1,0 +1,11 @@
+.options {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.options button {
+  height: 35px;
+  margin-right: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,0 +1,12 @@
+.container {
+  display: inline-block;
+  margin: 5px;
+}
+
+.contact_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+  justify-content: flex-start;
+  list-style: none;
+}

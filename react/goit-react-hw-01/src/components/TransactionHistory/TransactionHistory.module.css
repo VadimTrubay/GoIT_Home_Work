@@ -1,0 +1,26 @@
+.transaction {
+  margin-top: 20px;
+  border: 1px solid #000000;
+  width: 100%;
+  border-collapse: collapse;
+  height: 100%; /* Add this line to make the table take full height */
+}
+
+.head {
+  background-color: black;
+  color: white;
+}
+
+.head th {
+  padding: 8px;
+}
+
+.body td {
+  border: 1px solid #000000;
+  border-collapse: collapse;
+  padding: 8px;
+}
+
+.body tr:nth-child(even) {
+  background-color: #cecece;
+}
