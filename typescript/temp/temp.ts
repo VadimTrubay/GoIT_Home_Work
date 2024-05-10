@@ -74,16 +74,27 @@
 //
 // export {};
 
+// interface List {
+//   [key: string]: number | null;
+// }
+//
+// const store: List = {
+//   book: 10,
+//   pen: 20,
+//   pencil: 30,
+//   rep: null
+// }
 
 
+function getFirstEl<T>(arr: T[]): T | undefined {
+  return arr[0];
+}
 
 
-
-
-
-
-
-
+const numArr = [null, 2, "3", 4, 5]
+const strArr = ['a', 'b', 's']
+console.log(getFirstEl(numArr))
+console.log(getFirstEl(strArr))
 
 
 
