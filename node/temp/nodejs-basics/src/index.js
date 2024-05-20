@@ -1,19 +1,25 @@
-import fs from 'fs/promises';
+import express from 'express';
 
-// Перевіряємо доступність файлу або каталогу за вказаним шляхом
-(async () => {
-  const path = 'src/file.txt';
-  try {
-    await fs.access(path);
-    console.log(`Файл або каталог '${path}' доступний.`);
-  } catch (err) {
-    if (err.code === 'ENOENT') {
-      console.log(`Файл або каталог '${path}' не існує.`);
-    } else {
-      console.error(
-        `Помилка перевірки доступності файлу або каталогу '${path}':`,
-        err,
-      );
-    }
-  }
-})();
+const app = express();
+
+const PORT = 3000;
+
+const data = {
+  name: 'John',
+  age: 30,
+};
+
+app.use((req, res, next) => {
+  console.log(`Time: ${new Date().toLocaleString()}`);
+  next();
+});
+
+
+app.get('/', (req, res) => {
+  console.log(req.url.split('=')[1]);
+  res.json(data);
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
